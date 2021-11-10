@@ -2,6 +2,7 @@ package com.idnp.lab07_sqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -39,8 +40,9 @@ public class NuevoActivity extends AppCompatActivity {
                     long id = dbUsuarios.agregarUsuario(txtNombres.getText().toString(),txtApellidos.getText().toString(), txtTelefono.getText().toString(),txtDni.getText().toString(), txtCorreoElectronico.getText().toString());
 
                     if (id > 0) {
-                        Toast.makeText(NuevoActivity.this, "REGISTRO GUARDADO "+ Long.toString(id) + txtNombres.getText().toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(NuevoActivity.this, "REGISTRO GUARDADO ", Toast.LENGTH_LONG).show();
                         limpiar();
+                        regreso();
                     } else {
                         Log.d(TAG,Long.toString(id));
                         Toast.makeText(NuevoActivity.this, "ERROR AL GUARDAR REGISTRO" + Long.toString(id), Toast.LENGTH_LONG).show();
@@ -51,6 +53,12 @@ public class NuevoActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void regreso(){
+        Intent intent = new Intent(this, MainActivity.class);
+        //intent.putExtra("ID", id);
+        startActivity(intent);
     }
 
     private void limpiar() {

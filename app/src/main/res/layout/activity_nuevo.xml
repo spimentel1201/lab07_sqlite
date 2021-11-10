@@ -27,7 +27,7 @@
             android:textSize="20dp"
             android:textColor="@color/black"
             android:layout_marginEnd="50dp"
-            android:text="@string/TituloVer" />
+            android:text="@string/TituloCrear" />
         <ImageView
             android:id="@+id/imageLogo"
             android:layout_width="150dp"

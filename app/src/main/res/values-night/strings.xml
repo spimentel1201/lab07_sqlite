@@ -4,4 +4,5 @@
     <string name="lista">Lista de Usuarios Registrados</string>
     <string name="busqueda">Búsqueda</string>
     <string name="TituloVer">Crear Usuario</string>
+    <string name="TituloCrear">Crear Usuario</string>
 </resources>
